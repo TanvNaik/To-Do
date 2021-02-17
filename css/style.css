@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    background: #ff61616b;
+    font-family: 'Ubuntu', sans-serif;
+   
+}
+.top{
+    margin: 2%;
+    padding: 2%;
+    margin-bottom: 4%;
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+}
+.top1{
+    font-size: 1.2rem;
+    text-align: center;
+    align-items: center;
+    font-family: 'Luckiest Guy', cursive;
+    padding: 3%;
+    justify-content: center;
+    letter-spacing: 0.6rem;
+}
+.top2{
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem; 
+    text-align: center;
+}
+.container{
+    background:  url("/images/todo-bg.svg") #ffffff no-repeat ;
+    background-size: 100% 100%;
+    margin: 2%;
+    margin-bottom: 0;
+    height: 65vh;
+    width: 95%;
+    border-radius: 10px;
+    opacity: 0.7;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+table{
+    opacity: 1;
+    margin: 0 1% 0 1%;
+    padding: 0 4% 0 4%;
+    width: 98%;
+    border-spacing:0 15px;
+   /* visibility: hidden;*/
+}
+.newTask table{
+   /* visibility: visible;*/
+    padding: 0;
+    width: 100%;
+}
+.tasks tbody{
+    position: relative;
+    display: block;
+    overflow-y: scroll;
+    height: 58vh;
+}
+.tasks tr{
+    overflow: hidden;
+    box-shadow: rgb(0 0 0 / 16%) 0px 7px 3px, rgb(0 0 0 / 23%) 0px 6px 12px;
+    height: 10vh;
+    border-radius: 25px;
+    background: #ffbcbced;
+}
+.newTask tr{
+    background-color: #ffffff;
+    height: 2vh;
+    box-shadow: rgb(0 0 0 / 16%) 0px 7px 3px, rgb(0 0 0 / 23%) 0px 6px 12px;
+    border-radius: 25px;
+}
+
+td{
+    font-size: 1.1rem;
+    padding: 4%;
+    width: 85%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+    
+.secondTd{
+    border: none;
+    border-radius: 0;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.secondTd img{
+   position: relative;
+   right: 0;
+   height: 2rem;
+}
+.newTask{
+    /*margin: 2%;*/
+    width: 95%;
+    height: 4vh;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.newTask input{
+    height: 6vh;
+    width: 100%;
+    border: none;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.newTask img{ 
+    position: relative;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+
+@media only screen and (min-width:345px){
+    body{
+        background: #ffffff8c;
+    }
+    .main{
+        background: #ff61616b;
+        margin: auto;
+        max-width: 345px;
+        border-radius: 15px;
+        height: 100vh;
+    }
+}
