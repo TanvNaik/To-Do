@@ -36,7 +36,7 @@ body{
     text-align: center;
 }
 .container{
-    background:  url("/images/todo-bg.svg") #ffffff no-repeat ;
+    background:  url("../images/todo-bg.svg") #ffffff no-repeat ;
     background-size: 100% 100%;
     margin: 2%;
     margin-bottom: 0;
