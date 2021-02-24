@@ -9,8 +9,8 @@ body{
     height: 100vh;
     background: #ff61616b;
     font-family: 'Ubuntu', sans-serif;
-   
 }
+
 .top{
     margin: 2%;
     padding: 2%;
@@ -19,6 +19,7 @@ body{
     flex-direction: column;
     height: 15vh;
 }
+
 .top1{
     font-size: 1.2rem;
     text-align: center;
@@ -52,10 +53,8 @@ table{
     padding: 0 4% 0 4%;
     width: 98%;
     border-spacing:0 15px;
-   /* visibility: hidden;*/
 }
 .newTask table{
-   /* visibility: visible;*/
     padding: 0;
     width: 100%;
 }
@@ -64,6 +63,11 @@ table{
     display: block;
     overflow-y: scroll;
     height: 58vh;
+}
+/* make scrollbar transparent */
+tbody::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; 
 }
 .tasks tr{
     overflow: hidden;
@@ -99,7 +103,6 @@ td{
    height: 2rem;
 }
 .newTask{
-    /*margin: 2%;*/
     width: 95%;
     height: 4vh;
     border-radius: 10px;
@@ -120,16 +123,43 @@ td{
     width: 2rem;
     height: 2rem;
 }
+.delete{
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+.modal{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color:#ffbcbced;
+    padding: 10px;
+    border-radius: 15px;
+    
+}
+button{
+    margin: 2%;
+    border: none;
+    border-radius: 15px;
+    padding: 4%;
+    background-color: #fcebeb;
+}
 
-
-@media only screen and (min-width:345px){
+@media only screen and (min-width:365px){
     body{
-        background: #ffffff8c;
+        background: #ffffff;
     }
+    
     .main{
         background: #ff61616b;
         margin: auto;
-        max-width: 345px;
+        max-width: 365px;
         border-radius: 15px;
         height: 100vh;
     }
