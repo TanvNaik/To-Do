@@ -170,8 +170,6 @@ container.addEventListener('click',function(event){
                 completedTask(event);
             }
             else{
-                console.log(event.target.parentNode.parentNode)
-                event.target.parentNode.parentNode.classList.add("delete");
                 deleteTask(event);
             }
         });
