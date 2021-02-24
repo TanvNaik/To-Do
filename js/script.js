@@ -95,7 +95,7 @@ const addTask = function(value,status){
 const updateUI = function(desc, status){
     let html, newHtml;
 
-    html = '<tr><td>%Task%</td><td class="secondTd"><img id = "%id%" src="/images/%status%.png" alt="%status%"></td></tr>';
+    html = '<tr><td>%Task%</td><td class="secondTd"><img id = "%id%" src="images/%status%.png" alt="%status%"></td></tr>';
 
     newHtml = html.replace('%Task%',desc);
     newHtml = newHtml.replaceAll('%status%',status);
@@ -109,7 +109,7 @@ const updateUI = function(desc, status){
 //Completed Task
 const completedTask = function(event){
     
-    document.getElementById(event.target.id).src = "/images/complete.png";
+    document.getElementById(event.target.id).src = "images/complete.png";
     //tasks[document.getElementById(event.target.id.parentNode.previousSibling)]
     console.log(document.getElementById(event.target.id).parentNode.previousSibling.textContent);
     tasks.set(document.getElementById(event.target.id).parentNode.previousSibling.textContent, "complete");
