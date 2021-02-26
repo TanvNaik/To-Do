@@ -63,6 +63,7 @@ table{
     display: block;
     overflow-y: scroll;
     height: 58vh;
+
 }
 /* make scrollbar transparent */
 tbody::-webkit-scrollbar {
@@ -71,8 +72,8 @@ tbody::-webkit-scrollbar {
 }
 .tasks tr{
     overflow: hidden;
-    box-shadow: rgb(0 0 0 / 16%) 0px 7px 3px, rgb(0 0 0 / 23%) 0px 6px 12px;
-    height: 10vh;
+    box-shadow: rgb(0 0 0 / 16%) 0px 7px 3px, rgb(0 0 0 / 23%) 0px 6px 12px; 
+    min-width: 100px;
     border-radius: 25px;
     background: #ffbcbced;
 }
@@ -87,11 +88,14 @@ td{
     font-size: 1.1rem;
     padding: 4%;
     width: 85%;
+    min-width: 85%;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
 }
     
 .secondTd{
+    width: 14%;
+    min-width: 14%;
     border: none;
     border-radius: 0;
     border-top-right-radius: 25px;
@@ -123,26 +127,7 @@ td{
     width: 2rem;
     height: 2rem;
 }
-.modal{
-    visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color:#ffbcbced;
-    padding: 10px;
-    border-radius: 15px;
-    
-}
-button{
-    margin: 2%;
-    border: none;
-    border-radius: 15px;
-    padding: 4%;
-    background-color: #fcebeb;
-}
+
 
 @media only screen and (min-width:365px){
     body{
