@@ -19,6 +19,11 @@ let main = document.querySelector(".main");
 
 let date = document.querySelector(".date");
 
+let deletebtn = document.querySelector(".delete");
+
+let completebtn = document.querySelector(".complete");
+
+
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, '0');
 var mm = String(today.getMonth() + 1).padStart(2, '0'); 
@@ -26,7 +31,7 @@ var mm = String(today.getMonth() + 1).padStart(2, '0');
 let tasks = new Map();
 
 let id = 1;
-console.log(mm)
+
 
 switch(mm){
     case "01":
@@ -84,7 +89,7 @@ const addTask = function(value,status){
         // Add task to UI
         updateUI(value, status);
     }
-   console.log(value+status)
+   
     window.localStorage.setItem(value,status);
     //clear the input field
     desc.value = "";
@@ -110,33 +115,18 @@ const updateUI = function(desc, status){
 const completedTask = function(event){
     
     document.getElementById(event.target.id).src = "images/complete.png";
-    //tasks[document.getElementById(event.target.id.parentNode.previousSibling)]
-    console.log(document.getElementById(event.target.id).parentNode.previousSibling.textContent);
     tasks.set(document.getElementById(event.target.id).parentNode.previousSibling.textContent, "complete");
     window.localStorage.setItem(document.getElementById(event.target.id).parentNode.previousSibling.textContent, "complete");
-
-    undoChanges();
-    
 }
 
 // Delete Task
 const deleteTask = function(event){
    
    tasks.delete(document.getElementById(event.target.id).parentNode.previousSibling.textContent);
-
    window.localStorage.removeItem(document.getElementById(event.target.id)
                                     .parentNode.previousSibling.textContent);
     event.target.parentNode.parentNode.remove();
-   undoChanges();
 
-}
-
-const undoChanges = function(){
-    modal.style.visibility = "hidden";
-    if(window.matchMedia("(max-width: 364px)").matches){
-        document.querySelector("body").style.background = "#ff61616b";
-    }
-    main.style.opacity = "1";
 }
 
 
@@ -157,28 +147,23 @@ document.addEventListener('keypress',(e)=>{
 
 //Complete Or Delete Task
 container.addEventListener('click',function(event){
-    //let secondTd = document.querySelector(".secondTd");
-
     if(event.target.parentNode.classList.contains("secondTd")){
-        main.style.opacity = "0.4";
-   
-        if(window.matchMedia("(max-width: 364px)").matches){
-            document.querySelector("body").style.background = "#ffc5c585";
-        }
-        modal.addEventListener("click",e => {
-            if(e.target.classList.contains("complete")){
-                completedTask(event);
-            }
-            else{
-                deleteTask(event);
-            }
-        });
-        modal.style.visibility = "visible";
+        completedTask(event);
     }
+
+});
+
+container.addEventListener('dblclick',function(event){
+    if(event.target.parentNode.classList.contains("secondTd")){
+        deleteTask(event);
+        
+    }
+
 });
 
 // Retrieving Data onLoad
 window.onload = function(){
+
     for(let i=0; i< localStorage.length; i++){
         if(localStorage.getItem(localStorage.key(i)) === "pending" || localStorage.getItem(localStorage.key(i)) === "complete"){
             addTask(localStorage.key(i),localStorage.getItem(localStorage.key(i)))
