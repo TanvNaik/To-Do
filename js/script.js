@@ -3,7 +3,7 @@
 
 //////////////// DOM /////////////////////
 
-let addbtn = document.querySelector("#addbtn");
+let addbtn = document.querySelector(".add");
 
 let desc = document.querySelector("#new");
 
@@ -135,11 +135,11 @@ const deleteTask = function(event){
 
 
 //Adding Task
-addbtn.addEventListener("click", ()=>{
+addbtn.addEventListener("click", function(){
     addTask(desc.value,"pending");
 });
 
-document.addEventListener('keypress',(e)=>{
+document.addEventListener('keypress',function(e){
     if(e.keyCode ===13 || e.key === "Enter"){
         addTask(desc.value, "pending");
     }
