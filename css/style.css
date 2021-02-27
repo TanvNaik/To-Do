@@ -53,6 +53,7 @@ table{
     padding: 0 4% 0 4%;
     width: 98%;
     border-spacing:0 15px;
+    table-layout: fixed;
 }
 .newTask table{
     padding: 0;
@@ -73,7 +74,7 @@ tbody::-webkit-scrollbar {
 .tasks tr{
     overflow: hidden;
     box-shadow: rgb(0 0 0 / 16%) 0px 7px 3px, rgb(0 0 0 / 23%) 0px 6px 12px; 
-    min-width: 100px;
+    width: 100%;
     border-radius: 25px;
     background: #ffbcbced;
 }
@@ -127,6 +128,7 @@ td{
     width: 2rem;
     height: 2rem;
 }
+
 
 
 @media only screen and (min-width:365px){
