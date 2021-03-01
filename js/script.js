@@ -19,10 +19,6 @@ let main = document.querySelector(".main");
 
 let date = document.querySelector(".date");
 
-let deletebtn = document.querySelector(".delete");
-
-let completebtn = document.querySelector(".complete");
-
 
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, '0');
