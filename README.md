@@ -7,3 +7,6 @@
 - add tasks to the list
 - mark a task as complete
 - delete the completed tasks
+
+##### UI of To-Do App:
+![](/images/UI.png)
