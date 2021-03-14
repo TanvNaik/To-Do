@@ -1,161 +1,145 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-body{
-    height: 100vh;
-    background: #ff61616b;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-.top{
-    margin: 2%;
-    padding: 2%;
-    margin-bottom: 4%;
-    display: flex;
-    flex-direction: column;
-    height: 15vh;
+body {
+  height: 100vh;
+  background: #ff61616b;
+  font-family: "Ubuntu", sans-serif;
 }
 
-.top1{
-    font-size: 1.2rem;
-    text-align: center;
-    align-items: center;
-    font-family: 'Luckiest Guy', cursive;
-    padding: 3%;
-    justify-content: center;
-    letter-spacing: 0.6rem;
-}
-.top2{
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem; 
-    text-align: center;
-}
-.container{
-    background:  url("../images/todo-bg.svg") #ffffff no-repeat ;
-    background-size: 100% 100%;
-    margin: 2%;
-    margin-bottom: 0;
-    height: 65vh;
-    width: 95%;
-    border-radius: 10px;
-    opacity: 0.7;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+.top {
+  margin: 2%;
+  padding: 2%;
+  margin-bottom: 4%;
+  display: flex;
+  flex-direction: column;
+  height: 15vh;
 }
 
-table{
-    opacity: 1;
-    margin: 0 1% 0 1%;
-    padding: 0 4% 0 4%;
-    width: 98%;
-    border-spacing:0 15px;
-    table-layout: fixed;
+.top1 {
+  font-size: 1.2rem;
+  text-align: center;
+  align-items: center;
+  font-family: "Luckiest Guy", cursive;
+  padding: 3%;
+  justify-content: center;
+  letter-spacing: 0.6rem;
 }
-.newTask table{
-    padding: 0;
-    width: 100%;
+.top2 {
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  text-align: center;
 }
-.tasks tbody{
-    position: relative;
-    display: block;
-    overflow-y: scroll;
-    height: 58vh;
+.container {
+  background: url("../images/todo-bg.svg") #ffffff no-repeat;
+  background-size: 100% 100%;
+  margin: 2%;
+  margin-bottom: 0;
+  height: 65vh;
+  width: 95%;
+  border-radius: 10px;
+  opacity: 0.7;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
 
+table {
+  opacity: 1;
+  margin: 0 1% 0 1%;
+  padding: 0 4% 0 4%;
+  width: 98%;
+  border-spacing: 0 15px;
+  table-layout: fixed;
+}
+.newTask table {
+  padding: 0;
+  width: 100%;
+}
+.tasks tbody {
+  position: relative;
+  display: block;
+  overflow-y: scroll;
+  height: 58vh;
 }
 tbody::-webkit-scrollbar {
-    width: 0px;
-    background: transparent; 
+  width: 0px;
+  background: transparent;
 }
-.tasks tr{
-    overflow: hidden;
-    box-shadow: rgb(0 0 0 / 16%) 0px 7px 3px, rgb(0 0 0 / 23%) 0px 6px 12px; 
-    width: 100%;
-    border-radius: 25px;
-    background: #ffbcbced;
+.tasks tr {
+  overflow: hidden;
+  box-shadow: rgb(0 0 0 / 16%) 0px 7px 3px, rgb(0 0 0 / 23%) 0px 6px 12px;
+  width: 100%;
+  border-radius: 25px;
+  background: #ffbcbced;
 }
-.newTask tr{
-    background-color: #ffffff;
-    height: 2vh;
-    box-shadow: rgb(0 0 0 / 16%) 0px 7px 3px, rgb(0 0 0 / 23%) 0px 6px 12px;
-    border-radius: 25px;
-}
-
-td{
-    font-size: 1.1rem;
-    padding: 4%;
-    width: 85%;
-    min-width: 85%;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-}
-    
-.secondTd{
-    width: 14%;
-    min-width: 14%;
-    border: none;
-    border-radius: 0;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-}
-.secondTd img{
-   position: relative;
-   right: 0;
-   height: 2rem;
-}
-.newTask{
-    width: 95%;
-    height: 4vh;
-    border-radius: 10px;
-    align-items: center;
+.newTask tr {
+  background-color: #ffffff;
+  height: 2vh;
+  box-shadow: rgb(0 0 0 / 16%) 0px 7px 3px, rgb(0 0 0 / 23%) 0px 6px 12px;
+  border-radius: 25px;
 }
 
-.newTask input{
-    height: 6vh;
-    width: 100%;
-    border: none;
-    font-size: 1.2rem;
-    text-align: center;
+td {
+  font-size: 1.1rem;
+  padding: 4%;
+  width: 85%;
+  min-width: 85%;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
 }
 
-.newTask img{ 
-    position: relative;
-    right: 1rem;
-    width: 2rem;
-    height: 2rem;
+.secondTd {
+  width: 14%;
+  min-width: 14%;
+  border: none;
+  border-radius: 0;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
-.add{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.secondTd img {
+  position: relative;
+  right: 0;
+  height: 2rem;
+}
+.newTask {
+  width: 95%;
+  height: 4vh;
+  border-radius: 10px;
+  align-items: center;
 }
 
-.add button {
-    border: none;
-    background: #000000;
-    color: #ffffff;
+.newTask input {
+  height: 6vh;
+  width: 100%;
+  border: none;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.newTask img {
+  position: relative;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.new {
+  padding: 1% 1% 1% 1%;
+}
+@media only screen and (min-width: 365px) {
+  body {
+    background: #ffffff;
+  }
+
+  .main {
+    background: #ff61616b;
+    margin: auto;
+    max-width: 365px;
     border-radius: 15px;
-    font-size: 2rem;
-    width: 2rem;
-    height: 2rem;
-}
-.new{
-    padding: 1% 1% 1% 1%;
-}
-@media only screen and (min-width:365px){
-    body{
-        background: #ffffff;
-    }
-    
-    .main{
-        background: #ff61616b;
-        margin: auto;
-        max-width: 365px;
-        border-radius: 15px;
-        height: 100vh;
-    }
+    height: 100vh;
+  }
 }
