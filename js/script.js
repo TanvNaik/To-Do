@@ -136,11 +136,11 @@ addbtn.addEventListener("click", function (e) {
   }
 });
 
-/*document.addEventListener("keypress", function (e) {
+document.addEventListener("keypress", function (e) {
   if (e.keyCode === 13 || e.key === "Enter") {
     addTask(desc.value, "pending");
   }
-});*/
+});
 
 //Complete Or Delete Task
 container.addEventListener("click", function (event) {
